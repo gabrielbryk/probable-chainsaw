@@ -19,10 +19,14 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "moduleDetection": "force",
+    "baseUrl": ".",
     "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
     "allowJs": true,
-    "outDir": ".wasp/out/user"
+    "outDir": ".wasp/out/user",
+    "paths": {
+      "wasp/*": [".wasp/out/sdk/wasp/*"]
+    }
   },
   "include": ["src"]
 }

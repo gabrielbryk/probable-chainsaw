@@ -1,0 +1,14 @@
+hint_audit_task:
+  description: >
+    Review all hint ladders for {riddle_name_list} and confirm each has 4 tiers aligned with Hint_Philosophy.
+    Use context_pack_tool as needed for reference.
+  expected_output: >
+    A markdown report listing each riddle, whether tiers exist, and specific fixes needed.
+  agent: hint_specialist
+
+hint_fix_task:
+  description: >
+    Rewrite missing or weak hint ladders based on the audit findings and store updates in crew_outputs/hint_fixes.md.
+  expected_output: >
+    Updated hint ladder text for each flagged riddle plus notes on physical cues.
+  agent: hint_specialist

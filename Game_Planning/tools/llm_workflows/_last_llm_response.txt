@@ -1,0 +1,10 @@
+{
+  "riddle_name": "Junji_Ito_Spiral",
+  "variants": [
+    {
+      "summary": "Refines the Level 4 riddle with a formal hint ladder and explicit accepted answers, directly addressing all 'must_fix' evaluation points.",
+      "updated_markdown": "# Junji Ito Spiral\n\n## Status Tracker\n- [x] Narrative text finalized\n- [ ] Difficulty tier selected\n- [x] Accepted answers + validations documented\n- [x] Hint ladder drafted\n- [ ] Physical placement tested\n- [ ] Materials prepped\n\n## Riddle (Level 4)\n\"At the intersection of fibonacci and madness, where 1.618 meets the town that forgot how to die, behind the obsession that predates humanity.\"\n\n## Accepted Answers\n- **Primary:** \"Junji Ito tapestry\", \"Spiral tapestry\", \"Uzumaki tapestry\"\n- **Secondary:** \"Behind the tapestry\"\n- **Interaction:** Player must look behind the tapestry to find the next clue.\n\n## Hint Ladder\n- **Hint 1:** \"The obsession is a shape, a pattern that draws you in, found in nature and in madness.\"\n- **Hint 2:** \"The horror is Japanese. The story is called Uzumaki, and its art hangs on your wall.\"\n\n## Setup Notes\n- **CRITICAL:** Test adhesive on an inconspicuous part of the tapestry backing to ensure no damage.\n- Tape envelope securely to the back of the tapestry."
+    },
+    {
+      "summary": "Creates a hybrid riddle combining the directness of Level 3 with the aesthetic of Level 5, supported by a new hint ladder and clear answer validation.",
+      "updated_markdown": "# Junji Ito Spiral\n\n## Status Tracker\n- [x] Narrative text finalized\n- [ ] Difficulty tier selected\n- [x] Accepted answers + validations documented\n- [x] Hint ladder drafted\n- [ ] Physical placement tested\n- [ ] Materials prepped\n\n## Riddle (Level 4 Hybrid)\n\"Where the curse of Kurouzu-cho began, seek the golden ratio's prisoner. Behind the pattern that consumed a father, where counter-clockwise means death.\"\n\n## Accepted Answers\n- **Primary:** \"Junji Ito tapestry\", \"Spiral tapestry\", \"Uzumaki tapestry\"\n- **Secondary:** \"Behind the tapestry\"\n

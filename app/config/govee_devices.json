@@ -1,0 +1,14 @@
+[
+  {
+    "device": "86:5C:E1:6A:41:06:59:62",
+    "model": "H6046",
+    "ip": "10.0.0.50",
+    "name": "Bedroom Light Bars"
+  },
+  {
+    "device": "75:56:EE:2E:03:86:58:7D",
+    "model": "H610A",
+    "ip": "10.0.0.177",
+    "name": "Project Strip Lights"
+  }
+]

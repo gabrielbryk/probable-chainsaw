@@ -1,0 +1,171 @@
+[
+  {
+    "riddle_name": "Crystal_Collection",
+    "scores": {
+      "clarity": 4,
+      "theme_alignment": 5,
+      "difficulty_balance": 5,
+      "hint_readiness": 1,
+      "physical_feasibility": 4
+    },
+    "overall_feedback": "This is a brilliantly tailored riddle that leverages the solver's personal passion for geology. The thematic resonance is perfect, and the difficulty laddering across the three options is expertly crafted. The primary weakness is its current lack of hints, which is a critical risk for such a challenging set of clues.",
+    "improvement_recommendations": [
+      "For the Larimar riddle, a hint could be 'Think of the sea's color' or 'Where do pirates sail?'.",
+      "For the Opal riddle, a hint could focus on its need for water: 'I must drink to keep my fire.'",
+      "For the Smoky Quartz riddle, a hint could simplify the science: 'A ghost in the mountain, darkened by the earth's own energy.'",
+      "Finalize which of the three difficulty levels will be used for the hunt to focus production efforts."
+    ],
+    "must_fix": [
+      "Draft a full hint ladder (at least 2-3 hints per riddle option) before playtesting. The technical nature of the clues makes them high-risk for getting stuck without support.",
+      "Document the exact accepted answers and any potential variations to ensure smooth validation during the game."
+    ]
+  },
+  {
+    "riddle_name": "Flute_Music",
+    "scores": {
+      "clarity": 3,
+      "theme_alignment": 5,
+      "difficulty_balance": 2,
+      "hint_readiness": 1,
+      "physical_feasibility": 4
+    },
+    "overall_feedback": "Thematic alignment is perfect, leveraging Joy's personal instrument and expertise. However, the proposed riddles are excessively academic and risk being frustrating rather than fun, especially within a 30-45 minute hunt. The difficulty is miscalibrated, with the 'Level 3' option being exceptionally hard.",
+    "improvement_recommendations": [
+      "Rewrite the Level 3 riddle to focus on more accessible music theory or flute mechanics, avoiding obscure historical facts like 'Theobald Boehm' or Latin.",
+      "Consider merging the poetic elements of Level 5 (Debussy, specific flute parts) with a more solvable puzzle mechanic.",
+      "Incorporate a tangible musical element, like a short, annotated score of a piece Joy knows, to make the riddle more interactive and less of a pure knowledge check."
+    ],
+    "must_fix": [
+      "Finalize a single, solvable riddle text before playtesting; the current options are too disparate and complex.",
+      "Draft a complete hint ladder. The current riddle concepts are unsolvable without strong, pre-planned hints to guide the player through the dense technical knowledge required."
+    ]
+  },
+  {
+    "riddle_name": "Gaming_Area",
+    "scores": {
+      "clarity": 1,
+      "theme_alignment": 5,
+      "difficulty_balance": 2,
+      "hint_readiness": 0,
+      "physical_feasibility": 4
+    },
+    "overall_feedback": "This is a strong thematic concept with excellent alignment to Joy's interests, but it's currently a planning document, not a playable riddle. The three options are so specific they risk being unsolvable without external research, which can stall a timed hunt. The lack of a finalized riddle, hints, and answers makes it impossible to playtest.",
+    "improvement_recommendations": [
+      "Select one difficulty level and refine the riddle to be solvable without a search engine, perhaps by grounding it in a shared memory.",
+      "For the Level 3 option, rephrase to be more evocative and less like a trivia question, e.g., 'Where Ganon's ashes fell, and eight wise pieces were sold...'",
+      "Develop a hint ladder that first clarifies the game being referenced, then points toward the specific mechanic or lore detail."
+    ],
+    "must_fix": [
+      "Finalize a single riddle text from the provided options.",
+      "Document the exact expected answer(s) and validation logic.",
+      "Draft at least two hints that progressively lower the difficulty without giving away the answer."
+    ]
+  },
+  {
+    "riddle_name": "Junji_Ito_Spiral",
+    "scores": {
+      "clarity": 4,
+      "theme_alignment": 5,
+      "difficulty_balance": 5,
+      "hint_readiness": 3,
+      "physical_feasibility": 4
+    },
+    "overall_feedback": "This is a thematically perfect and well-structured riddle that leverages a key personal item. The difficulty laddering is excellent, providing flexibility. The primary risks are physical (damaging the tapestry) and the need for a formal hint structure beyond the alternate riddle versions.",
+    "improvement_recommendations": [
+      "Select a final riddle version to focus refinement efforts. Level 4 offers the best balance of poetic tone and solvability.",
+      "Draft a 2-3 step hint ladder. Hint 1 could focus on 'spiral' or 'madness'. Hint 2 could explicitly name 'Junji Ito' or 'Uzumaki'.",
+      "Test adhesives on an inconspicuous part of the tapestry or its backing to ensure no damage or residue."
+    ],
+    "must_fix": [
+      "Finalize the accepted answer(s) and validation logic. Is the answer 'tapestry', 'behind the tapestry', or interacting with it?",
+      "Draft the hint ladder. The current document notes it's a to-do item, which is a blocker for playtesting."
+    ]
+  },
+  {
+    "riddle_name": "Ocean_Vuong_Poetry",
+    "scores": {
+      "clarity": 4,
+      "theme_alignment": 5,
+      "difficulty_balance": 5,
+      "hint_readiness": 3,
+      "physical_feasibility": 4
+    },
+    "overall_feedback": "This is a thematically perfect and emotionally resonant riddle with a well-structured difficulty ladder. The connection to Joy's interests is profound. The primary weakness is the lack of a single, finalized riddle text and defined answers, which prevents hint creation and final production.",
+    "improvement_recommendations": [
+      "Select a single riddle from the options to focus development efforts.",
+      "If using Level 4 or 5, ensure hints can guide a player who lacks the specific literary or biographical knowledge.",
+      "Specify the exact book and page number to ensure the clue is found reliably.",
+      "Consider using a high-quality, non-damaging bookmark as the physical clue to enhance the premium feel."
+    ],
+    "must_fix": [
+      "Finalize the riddle text by choosing one of the proposed levels.",
+      "Document the specific book title (e.g., 'On Earth We're Briefly Gorgeous' or 'Night Sky with Exit Wounds') as the definitive answer.",
+      "Define the exact page number for clue placement (e.g., 'page 28' or 'page 87')."
+    ]
+  },
+  {
+    "riddle_name": "Okami_Poster",
+    "scores": {
+      "clarity": 2,
+      "theme_alignment": 5,
+      "difficulty_balance": 2,
+      "hint_readiness": 1,
+      "physical_feasibility": 4
+    },
+    "overall_feedback": "Excellent thematic concept deeply tied to Joy's interests, but the current riddle options are more like lore trivia than solvable puzzles. The difficulty is punishingly high without a clear path to the answer, and the lack of drafted hints makes it unplayable. The production notes are solid.",
+    "improvement_recommendations": [
+      "Rewrite the riddle to be a puzzle, not just a knowledge check. For example, use game symbols or art elements from the poster itself.",
+      "Draft a multi-stage hint ladder that guides the player from broad themes (e.g., 'Think of the game's art style') to specific mechanics (e.g., 'How do you reveal secrets in the game?').",
+      "Consider combining a simpler riddle with the UV or mirror special effect to create a satisfying 'aha!' moment without requiring obscure lore recall."
+    ],
+    "must_fix": [
+      "Finalize a single, solvable riddle text. The current options are too varied and abstract to be implemented.",
+      "The Level 5 calculation `(8*8 + 200) / 9` results in a non-integer, making it an unsolvable cipher. This must be redesigned or removed.",
+      "Document the exact accepted answer(s) and the logic required to reach them."
+    ]
+  },
+  {
+    "riddle_name": "Pop_Culture",
+    "scores": {
+      "clarity": 1,
+      "theme_alignment": 5,
+      "difficulty_balance": 2,
+      "hint_readiness": 0,
+      "physical_feasibility": 3
+    },
+    "overall_feedback": "This concept has strong thematic potential by tapping into Joy's favorite media, but the execution is critically flawed. The riddles are overly abstract, relying on jargon that obscures the path to a solution rather than guiding it. The difficulty laddering is inconsistent, and the lack of defined answers or hints makes it unplayable in its current state.",
+    "improvement_recommendations": [
+      "For EEAAO, ground the riddle in a tangible object from the film, like a bagel, googly eyes, or a fanny pack, instead of abstract math concepts.",
+      "For Arcane, reference specific visual landmarks like the bridge, The Last Drop, or a Hextech crystal, rather than 'purple chemistry'.",
+      "Rewrite levels to be distinct in their approach. Level 3 could be a direct quote, Level 4 a description of a key scene, and Level 5 a metaphorical take on a character's journey.",
+      "Add thematic decorations (like googly eyes for EEAAO) as integral parts of the clue, not just optional setup."
+    ],
+    "must_fix": [
+      "Define a single, specific physical location/answer for at least one chosen theme (e.g., 'the washing machine' for EEAAO's laundromat theme).",
+      "Draft a corresponding hint ladder for the chosen answer that provides progressively clearer information.",
+      "Rewrite the riddle text to contain solvable logic that points to the defined answer, removing the reliance on guessing the media reference from abstract jargon."
+    ]
+  },
+  {
+    "riddle_name": "Wavelength_Game",
+    "scores": {
+      "clarity": 2,
+      "theme_alignment": 5,
+      "difficulty_balance": 3,
+      "hint_readiness": 1,
+      "physical_feasibility": 5
+    },
+    "overall_feedback": "The riddle has an excellent thematic foundation, tying directly into a specific shared interest. However, the current options are more like academic descriptions or trivia questions than engaging riddles. They lack poetic flair and rely heavily on external, technical knowledge, which risks creating frustration rather than a fun 'aha!' moment. The core idea is strong, but the execution needs to be more playful and self-contained.",
+    "improvement_recommendations": [
+      "Rewrite the chosen riddle to be more evocative and less like a technical manual. Use metaphors related to spectrums, light, or telepathy.",
+      "For Level 3, instead of '67%', use more descriptive language like 'Two-thirds of the way toward a hero's might...'",
+      "Ensure the answer is finding the game box, not solving a complex math problem inside the riddle itself.",
+      "Simplify the Level 4 and 5 concepts to be solvable within the context of the game, not requiring external research on game theory or the designer's full name."
+    ],
+    "must_fix": [
+      "Finalize a single riddle text; presenting three options is a planning step, not a finished riddle.",
+      "Draft the hint ladder. A riddle at this difficulty without hints is a significant risk for getting the player stuck.",
+      "Document the specific, expected answer and the validation logic (e.g., 'Player finds the Wavelength game box')."
+    ]
+  }
+]

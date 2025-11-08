@@ -1,49 +1,65 @@
 datasource db {
-  provider = "sqlite"
-  // Wasp requires that the url is set to the DATABASE_URL environment variable.
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-// Wasp requires the `prisma-client-js` generator to be present.
 generator client {
   provider = "prisma-client-js"
 }
 
-model User {
-    id       Int       @id @default(autoincrement())
-    progress Progress?
-    hintLogs HintLog[]
-}
-
 model Riddle {
-    id         Int    @id @default(autoincrement())
-    title      String
-    difficulty String
-    narrative  String
-    answer     String
-    hint       String
+  id             Int      @id @default(autoincrement())
+  order          Int
+  title          String
+  body           String
+  answer         String
+  difficulty     String?
+  hints          String?
+  mediaUrl       String?
+  metadata       String?
+  successMessage String?
+  missMessage    String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  hintLogs             HintLog[]
+  activeProgressStates Progress[] @relation("ActiveRiddle")
+
+  @@unique([order])
 }
 
 model Progress {
-    id              Int  @id @default(autoincrement())
-    currentRiddleId Int
-    attempts        Int
-    user            User @relation(fields: [userId], references: [id])
-    userId          Int  @unique
+  id                Int      @id @default(autoincrement())
+  status            String   @default("NOT_STARTED")
+  activeRiddleId    Int?
+  activeRiddle      Riddle?  @relation("ActiveRiddle", fields: [activeRiddleId], references: [id])
+  attemptsPerRiddle String?
+  startedAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
 }
 
 model HintLog {
-    id        Int      @id @default(autoincrement())
-    riddleId  Int
-    hint      String
-    timestamp DateTime
-    user      User     @relation(fields: [userId], references: [id])
-    userId    Int
+  id        Int      @id @default(autoincrement())
+  riddleId  Int
+  riddle    Riddle   @relation(fields: [riddleId], references: [id])
+  tier      String
+  reason    String
+  payload   String
+  createdAt DateTime @default(now())
+}
+
+model GuideTranscript {
+  id        Int      @id @default(autoincrement())
+  role      String
+  message   String
+  metadata  String?
+  createdAt DateTime @default(now())
 }
 
 model EffectEvent {
-    id        Int      @id @default(autoincrement())
-    type      String
-    timestamp DateTime
-    details   String
+  id        Int      @id @default(autoincrement())
+  type      String
+  source    String
+  payload   String
+  createdAt DateTime @default(now())
 }

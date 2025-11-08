@@ -43,6 +43,7 @@ Create a scavenger hunt that makes Joy feel deeply seen, celebrated, and loved b
 2. Set up LLM Guide integration
 3. Configure Smart Home lighting bridge
 4. Test web interface
+5. Use the OpenRouter-powered evaluators in `tools/llm_workflows/` to grade and iterate on riddles
 
 **Technical Stack**:
 - **Frontend**: React + Vite + Tailwind (web interface)
@@ -51,6 +52,22 @@ Create a scavenger hunt that makes Joy feel deeply seen, celebrated, and loved b
 - **Audio**: Tone.js for sound cues
 
 **Note**: Technical documentation lives in `03_Technical_Systems/`; add implementation details there as systems come online.
+
+#### LLM Evaluation Utilities
+We now ship two Python CLIs under `tools/llm_workflows/` that call OpenRouter models. Export `OPENROUTER_API_KEY` plus, optionally, `OPENROUTER_MODEL_ALIAS` set to one of our approved aliases: `claude-sonnet`, `claude-haiku`, `gpt-4o-mini`, or `mistral-large`. The `--model` flag only accepts those aliases.
+
+```bash
+# 1) Score every current riddle and save structured recommendations
+python -m tools.llm_workflows.evaluate_riddles \
+  --output tools/llm_workflows/riddle_evaluations.json
+
+# 2) Generate improved variants based on those recommendations
+python -m tools.llm_workflows.generate_variations \
+  --evaluations tools/llm_workflows/riddle_evaluations.json \
+  --output tools/llm_workflows/riddle_variations.json
+```
+
+Both scripts read directly from `02_Riddle_Content/`, so rerun them whenever a riddle changes. The evaluations JSON doubles as an audit trail for why a riddle was revised.
 
 ---
 
@@ -122,13 +139,24 @@ Scavenger Hunt/
 │   ├── Contingency Plans.md
 │   └── reference_images/
 │
-└── 05_Testing_and_Execution/
-    ├── Full_Run_Test_Plan.md
-    ├── Execution_Guide.md
-    ├── Post_Event_Review.md
-    ├── Production Timeline.md
-    ├── Day-Of Checklist.md
-    └── Backup Hints and Help.md
+├── 05_Testing_and_Execution/
+│   ├── Full_Run_Test_Plan.md
+│   ├── Execution_Guide.md
+│   ├── Post_Event_Review.md
+│   ├── Production Timeline.md
+│   ├── Day-Of Checklist.md
+│   └── Backup Hints and Help.md
+│
+├── crew_ai/
+│   ├── docs/
+│   │   └── CrewAI_Proposal.md
+│   └── (future) orchestrator code + configs
+│
+└── tools/
+    └── llm_workflows/
+        ├── evaluate_riddles.py
+        ├── generate_variations.py
+        └── ...
 ```
 
 ---

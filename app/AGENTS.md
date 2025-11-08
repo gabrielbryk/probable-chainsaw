@@ -23,20 +23,21 @@ This project has two knowledge sources:
 2. **Setup / Run**
    ```bash
    wasp db migrate-dev   # prepare SQLite
+   wasp db seed          # load canonical riddles + progress
    wasp start            # runs backend + frontend
    ```
-   Use `.env.server`/`.env.local` (following the forthcoming `.env.example`) for `OPENAI_API_KEY`, `SYSTEM_ADMIN_API_KEY`, `GOVEE_API_KEY`, `GOOGLE_HOME_WEBHOOK_URL`, `DATABASE_URL`, `MOCK_MODE`, etc. Never commit secrets.
+   Use `.env.server`/`.env.local` (following the forthcoming `.env.example`) for `OPENAI_API_KEY`, `SYSTEM_ADMIN_API_KEY`, `GOVEE_API_KEY`, `DATABASE_URL`, `MOCK_MODE`, etc. Never commit secrets.
 3. **Testing & scripts**
    - `wasp test` (once added)
-   - Integration self-tests / seed scripts documented in `docs/` as they appear.
+   - Integration self-tests / seed scripts documented in `docs/` as they appear (e.g., `node scripts/admin/acknowledge-help.ts` to simulate an operator acknowledging a Need Help ping).
    - When using hardware, note whether you ran in mock mode or real mode.
 4. **Reporting**
    - Include command outputs (pass/fail) in PR descriptions or status notes.
    - Document any architectural deviation in `docs/DEV_TASKS.md` and inform Gabe.
 
 ## Coding Standards
-- Use TypeScript/JS modules under `src/`. Organize backend logic into services/helpers rather than dumping everything in `actions.js`.
-- React components belong in `src/pages`/`components`, styled with Tailwind (gradient palette per docs). Keep copy synced with `../Game_Planning` content.
+- Use TypeScript/JS modules under `src/`. Organize backend logic into `src/server/**` services/helpers rather than dumping everything in one file.
+- React components belong under `src/client/**`, styled with Tailwind (gradient palette per docs). Keep copy synced with `../Game_Planning` content.
 - Build the backend as the “Game” brain: state machine, answer validation, guide service, effect dispatcher, and operator API.
 - Integration adapters must ship with both mock and real implementations and expose self-test hooks.
 
@@ -45,6 +46,8 @@ This project has two knowledge sources:
 - Game Master design: `docs/Game_Master_Design.md`
 - Frontend journey: `docs/Frontend/User_Journey.md`
 - Dev task checklist: `docs/DEV_TASKS.md`
+- Integration scope: `docs/Govee_LAN_API.md` (Google Home bridge deferred; stick to Govee-only lighting for now.)
+- Repo structure & conventions: `docs/Repo_Structure.md`
 - Narrative/lore: `../Game_Planning/**`
 - Prompt for regenerating scaffold: `../new_wasp_prompt.md`
 

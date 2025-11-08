@@ -15,7 +15,7 @@
 4. **Event-driven** – Game emits structured events (`riddle_solved`, `hint_escalated`, `effect_triggered`) that downstream consumers (frontend, lighting bridge) subscribe to.
 5. **Graceful operator override & live editing** – Gabe can always step in with a manual skip/replay or edit riddles/hints/order mid-hunt without corrupting the log.
 6. **Simple guardrails** – Leverage Wasp’s built-in auth primitives enough to separate the public player UI from privileged endpoints (system admin API key), but keep the flow frictionless for Joy.
-7. **Testable integrations** – Every external hookup (Govee, Google Home, Tune.js) must have both a simulator for local dev and a way to be tested independently before event day.
+7. **Testable integrations** – Every external hookup (Govee, Tune.js; Google Home in the future) must have both a simulator for local dev and a way to be tested independently before event day.
 
 ## Conceptual Layers
 1. **State & Storage**
@@ -30,7 +30,7 @@
 4. **Effect Dispatch**
    - Event bus inside the backend fans out to:
      - Frontend (for UI animations + Tune.js cues).
-     - Lighting bridge (Govee/Google webhooks).
+     - Lighting bridge (Govee). (Google Home automation bridge deferred until APIs stabilize.)
      - Any future physical props (e.g., piano MIDI trigger).
 5. **Operator Controls (API-first for now)**
    - Core API endpoints support `skip`, `back`, `replay effect`, `pause/resume`, `mark complete`, and live edits (update riddle text, add hints, change order).
@@ -39,7 +39,7 @@
 
 6. **Integration Simulation & Testing**
    - Each external adapter ships with a mock implementation so we can run full-stack tests without firing real hardware.
-   - Standalone “self-tests” (little scripts) poke each real integration—e.g., flash Govee lights, trigger Google webhook—before plugging them into Game.
+  - Standalone “self-tests” (little scripts) poke each real integration—e.g., flash Govee lights, trigger a Tune.js cue—before plugging them into Game.
 
 ## High-Level Flow
 1. Gabe starts Game with a clean database → seeds riddles (and can add/edit them on the fly).

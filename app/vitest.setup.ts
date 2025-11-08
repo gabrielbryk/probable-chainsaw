@@ -1,0 +1,5 @@
+process.env.WASP_ENV = process.env.WASP_ENV ?? 'development'
+process.env.NODE_ENV = process.env.NODE_ENV ?? 'development'
+process.env.DATABASE_URL = process.env.DATABASE_URL ?? 'file:./dev.db'
+process.env.WASP_SERVER_URL = process.env.WASP_SERVER_URL ?? 'http://localhost:3001'
+process.env.WASP_WEB_CLIENT_URL = process.env.WASP_WEB_CLIENT_URL ?? 'http://localhost:3000/'

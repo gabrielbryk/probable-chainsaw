@@ -1,0 +1,86 @@
+context_gathering_task:
+  description: >
+    Use the context_pack_tool to assemble a focused knowledge bundle for {riddle_name}.
+    Prioritize the provided file list: {context_files}. Summarize why each excerpt matters.
+  expected_output: >
+    Markdown titled "Context Pack for {riddle_name}" with sections per file that cite line numbers
+    when possible and highlight canon constraints or open questions discovered.
+  agent: context_curator
+
+evaluation_task:
+  description: >
+    Run evaluate_riddle_tool for {riddle_name}. Interpret the JSON to explain scores,
+    call out must-fix items, and (if needed) trigger variation_generation_tool to suggest rewrites.
+  expected_output: >
+    A concise analyst brief with:
+      - Parsed score table
+      - Top improvement recommendations
+      - Must-fix checklist
+      - Optional variation highlights (if the variation tool was used)
+  agent: riddle_reviewer
+
+creative_brief_task:
+  description: >
+    Translate the context pack into a creative brief for {riddle_name}. Highlight emotional beat,
+    sensory anchors, physical location, and success criteria.
+  expected_output: >
+    A markdown brief with sections for Emotional Beat, Physical Anchor, Narrative Motifs,
+    and Risks/Opportunities.
+  agent: experience_architect
+
+riddle_draft_task:
+  description: >
+    Use riddle_prompt_tool to craft Level 3-5 riddle text, accepted answers, hint ladder, and material notes.
+    Reference the creative brief and slot description.
+  expected_output: >
+    A complete riddle markdown (metadata, Level 3/4/5 text, accepted answers, hint ladder, setup notes).
+  agent: riddle_ideator
+
+critique_assessment_task:
+  description: >
+    Review the latest draft using evaluate_riddle_tool and connection_map_tool. Summarize alignment, risks,
+    and recommend changes before production.
+  expected_output: >
+    A critique memo covering score interpretation, thematic fit, room/flow balance, and actionable next steps.
+  agent: riddle_critic
+
+hint_review_task:
+  description: >
+    Inspect the hint ladder from the draft and rewrite it if needed to match Hint Philosophy tiers.
+    Reference physical cues and emotional tone.
+  expected_output: >
+    Updated hint ladder text plus a checklist confirming timing, tone, and physical cues for all four tiers.
+  agent: hint_specialist
+
+connection_review_task:
+  description: >
+    Use connection_map_tool to ensure the new draft doesn't collide with existing riddles (themes, rooms, lighting).
+    Flag any overlap or missing motifs.
+  expected_output: >
+    A short alignment report referencing the flow map snippet and noting any required adjustments.
+  agent: connection_mapper
+
+revision_plan_task:
+  description: >
+    Review the latest evaluation findings for {riddle_name} and outline concrete revision actions.
+    Reference evaluate_riddle_tool output and, if helpful, variation_generation_tool.
+  expected_output: >
+    A bullet list covering each must-fix item, planned change, and whether a new variant is required.
+  agent: revision_scribe
+
+apply_revision_task:
+  description: >
+    Generate the updated riddle markdown using variation_generation_tool (or manual edits)
+    and store it under crew_outputs/revised_{riddle_name}.md.
+  expected_output: >
+    Fresh markdown with metadata, riddle text, hint ladder, and setup notes ready for review.
+  agent: revision_scribe
+
+flow_sync_task:
+  description: >
+    Summarize how the revision affects flow/roadmap, log placement-map updates, and capture doc patch proposals.
+  expected_output: >
+    - Patch proposal referencing any files to update (Flow Map, Crafting Plan, etc.)
+    - Roadmap note describing follow-up tasks
+    - Placement update note if physical locations change
+  agent: flow_integrator
